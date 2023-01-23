@@ -5,6 +5,10 @@
 #
 # https://developers.google.com/calendar/api/quickstart/python
 #
+# Look at this one too: https://qxf2.com/blog/google-calendar-python/
+# Look at this one too: https://code.google.com/archive/p/python-weather-api/
+# Look at this one too: https://www.tomorrow.io/blog/creating-daily-forecasts-with-a-python-weather-api/
+
 
 import datetime
 import os.path
@@ -48,7 +52,7 @@ def main():
         now = datetime.datetime.utcnow().isoformat() + 'Z'  # 'Z' indicates UTC time
         print('Getting the upcoming 10 events')
         events_result = service.events().list(calendarId='primary', timeMin=now,
-                                              maxResults=10, singleEvents=True,
+                                              maxResults=1, singleEvents=True,
                                               orderBy='startTime').execute()
         events = events_result.get('items', [])
 
@@ -58,8 +62,9 @@ def main():
 
         # Prints the start and name of the next 10 events
         for event in events:
-            start = event['start'].get('dateTime', event['start'].get('date'))
-            print(start, event['summary'])
+            print(event)
+            # start = event['start'].get('dateTime', event['start'].get('date'))
+            # print(start, event['summary'])
 
     except HttpError as error:
         print('An error occurred: %s' % error)
