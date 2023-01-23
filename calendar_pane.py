@@ -8,7 +8,7 @@
 # Look at this one too: https://qxf2.com/blog/google-calendar-python/
 # Look at this one too: https://code.google.com/archive/p/python-weather-api/
 # Look at this one too: https://www.tomorrow.io/blog/creating-daily-forecasts-with-a-python-weather-api/
-
+# This may have some merit: https://pypi.org/project/python-weather/
 
 import datetime
 import os.path
