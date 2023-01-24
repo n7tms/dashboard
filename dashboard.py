@@ -9,7 +9,7 @@ dashboard = tk.Tk()
 dashboard.title("Dashboard")
 
 # pi = tk.PhotoImage(file='phone_icon.png')
-dashboard.iconphoto(False,tk.PhotoImage(file='phone_icon.png'))
+# dashboard.iconphoto(False,tk.PhotoImage(file='phone_icon.png'))
 # dashboard.tk.call('wm','iconphoto',dashboard._w, tk.PhotoImage(file='dashboard_logo.png'))
 
 
